@@ -17,6 +17,13 @@ class ProductSeeder extends Seeder
         //
         DB::table('products')->insert([
             [
+                'name' => 'Cinta Tak Pernah Tepat Waktu',
+                'price' => '78000',
+                'category' => 'Novel',
+                'description' => 'A sad romance about a guy seraching for his love.',
+                'image' => 'https://bukumojok.com/wp-content/uploads/2018/11/Cinta-Tak-Pernah-Tepat-Waktu.jpg'
+            ],
+            [
                 'name' => 'Kitab Rasa',
                 'price' => '48000',
                 'category' => 'Cerpen',

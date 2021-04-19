@@ -20,5 +20,14 @@
         height: 500px;
         padding-top: 100px;
     }
+    .slider-img{
+        height: 500px !important;
+    }
+    .slider{
+        background: #d3e4eb;
+    }
+    .product-view{
+        height: 600px;
+    }
 </style>
 </html>
