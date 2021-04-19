@@ -29,5 +29,15 @@
     .product-view{
         height: 600px;
     }
+    .trending-img{
+        height: 100px;
+    }
+    .trending-section{
+        float: left;
+        width: 20%;
+    }
+    .footer{
+        clear: both;
+    }
 </style>
 </html>
