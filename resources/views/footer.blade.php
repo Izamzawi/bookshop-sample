@@ -1,9 +1,9 @@
 <div class="card footer">
     <div class="card-header">
-        Featured
+        E-Commerce
     </div>
     <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <h5 class="card-title">Dibuat menggunakan Laravel 8</h5>
+        <p class="card-text">Proyek ini merupakan <i>clone</i> dari tutorial di Youtube oleh channel Code Step By Step.</p>
     </div>
 </div>

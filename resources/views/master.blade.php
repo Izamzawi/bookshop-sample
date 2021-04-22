@@ -11,31 +11,47 @@
     <title>E-Commerce Project</title>
 </head>
 <body>
-    {{View::make('header')}}
-    @yield('content')
-    {{View::make('footer')}}
+    <div class="container">    
+        {{View::make('header')}}
+        @yield('content')
+        {{View::make('footer')}}
+    </div>
 </body>
 <style>
     .login{
         height: 500px;
         padding-top: 100px;
     }
-    .slider-img{
+    .img-slider{
         height: 500px !important;
     }
     .slider{
         background: #d3e4eb;
     }
-    .product-view{
+    /* .product-view{
         height: 600px;
+    } */
+    .carousel-caption{
+        color: rgb(59, 59, 59);
+        background: rgba(189, 189, 189, 0.5) !important;
     }
-    .trending-img{
+    .img-trending{
         height: 100px;
     }
-    .trending-section{
+    .trending-item{
         float: left;
         width: 20%;
     }
+    .img-detail{
+        height: 350px;
+    }
+    .search-box{
+        width: 250px !important;
+    }
+    .img-result{
+        height: 150px;
+    }
+
     .footer{
         clear: both;
     }
