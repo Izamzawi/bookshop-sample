@@ -28,7 +28,7 @@
             </a>
         </div>
     </div>
-    <div class="trending-wrapper mx-2 ">
+    <div class="product-wrapper mx-2 ">
         <h3>Trending Products</h3>
         <div class="trending-section mb-4">
             @foreach($products as $product)
