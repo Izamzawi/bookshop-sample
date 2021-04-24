@@ -20,6 +20,7 @@
                     </div>
                     <div class="col-6 pt-4">
                         <h5><a href="detail/{{$product->id}}">{{$product->name}}</a></h5>
+                        <h5>Rp {{$product->price}}</h5>                    
                         <h6>{{$product->description}}</h6>                    
                     </div>
                     <div class="col pt-5">
@@ -29,9 +30,10 @@
             </div>
             @endforeach
         </div>
+        <div class="col-md-4 offset-md-4">
+            <a href="order" class="btn btn-success btn-lg">Place order</a>
+        </div>
     </div>
 </div>
-
-
 
 @endsection
