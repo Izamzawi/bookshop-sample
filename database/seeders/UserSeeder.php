@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
             [                
                 'name' => 'Zamza Idham',
                 'email' => 'zamza@idham.com',
-                'password' => Hash::make('izamzaw11')
+                'password' => Hash::make('kompor13')
             ],
             [                
                 'name' => 'Putra Pradana',

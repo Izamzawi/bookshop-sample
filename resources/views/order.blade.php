@@ -24,22 +24,23 @@
             </table>
         </div>
         <div class="col-md-6 offset-md-3">
-        <form>
-            <div class="form-group">
-                <textarea type="email" class="form-control" placeholder="Write your address"></textarea>
-                <small id="emailHelp" class="form-text text-muted">Be sure to write the correct and precise address.</small>
-            </div>
-            <div class="form-group">
-                <h5>Payment method</h5>
-                <input type="radio" id="transfer" name="payment" value="transfer">
-                <label for="transfer">Manual transfer</label><br>
-                <input type="radio" id="va" name="payment" value="va">
-                <label for="va">Virtual account</label><br>
-                <input type="radio" id="visa" name="payment" value="visa">
-                <label for="visa">VISA</label><br>
-                <input type="radio" id="qris" name="payment" value="qris">
-                <label for="qris">QRIS</label> 
-            </div>
+            <form action="/ordercheckout" method="POST" >
+                @csrf
+                <div class="form-group">
+                    <textarea name="address" type="text" class="form-control" placeholder="Write your address"></textarea>
+                    <small id="addressHelp" class="form-text text-muted">Be sure to write the correct and detailed address.</small>
+                </div>
+                <div class="form-group">
+                    <h5>Payment method</h5>
+                    <input type="radio" id="transfer" name="payment" value="transfer">
+                    <label for="transfer">Manual transfer</label><br>
+                    <input type="radio" id="va" name="payment" value="va">
+                    <label for="va">Virtual account</label><br>
+                    <input type="radio" id="visa" name="payment" value="visa">
+                    <label for="visa">VISA</label><br>
+                    <input type="radio" id="qris" name="payment" value="qris">
+                    <label for="qris">QRIS</label> 
+                </div>
                 <button type="submit" class="btn btn-success btn-lg">Place order</button>
             </form>
         </div>
