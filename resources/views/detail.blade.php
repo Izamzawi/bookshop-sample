@@ -18,9 +18,9 @@
                 @csrf
                 <input type="hidden" name="product_id" value="{{$product['id']}}">
                 <button class="btn btn-primary">Add to cart</button>
+                <!-- <button class="btn btn-info">Buy now</button> -->
             </form>
             <br><br>
-            <button class="btn btn-info">Buy now</button>
         </div>
     </div>
 </div>

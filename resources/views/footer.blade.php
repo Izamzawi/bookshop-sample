@@ -1,4 +1,4 @@
-<div class="card footer">
+<div class="card text-center footer">
     <div class="card-header">
         E-Commerce
     </div>

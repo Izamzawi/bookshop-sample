@@ -8,7 +8,6 @@ if(Session::has('user'))
     $total = ProductController::cartItem();
 }
 
-
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light mb-3">
@@ -22,12 +21,11 @@ if(Session::has('user'))
             <li class="nav-item active">
                 <a class="nav-link" href="/">Home</a>
             </li>
+            @if(Session::has('user'))
             <li class="nav-item">
                 <a class="nav-link" href="myorders">Orders</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
+            @endif
         </ul>
         <form action="/search" class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2 search-box" type="search" name="query" placeholder="Search" aria-label="Search">
@@ -39,11 +37,11 @@ if(Session::has('user'))
                 <a class="nav-link" href="/cartlist">Cart ({{$total}})</a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{Session::get('user')['name']}}</a>
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{Session::get('user')['name']}}
+                </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/logout">Logout</a>
-                    <!-- <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a> -->
+                    <a class="dropdown-item" href="#">Logout</a>
                 </div>
             </li>
             @else

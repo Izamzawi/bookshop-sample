@@ -1,3 +1,15 @@
+<?php 
+
+use App\Http\Controllers\ProductController;
+
+$total = 0;
+if(Session::has('user'))
+{
+    $total = ProductController::cartItem();
+}
+
+?>
+
 @extends('master')
 
 @section('content')
@@ -10,6 +22,12 @@
             </div>
         </div>
         <div class="result-section my-4">
+            @if($total == 0)
+            <p>Your cart is empty. Choose some product first.</p>
+            <div class="col-md-4 offset-md-4">
+                <p class="btn btn-secondary btn-lg">Place order</p>
+            </div>
+            @else
             @foreach($products as $product)
             <div class="result-item">
                 <div class="row pb-2 ">
@@ -33,6 +51,7 @@
         <div class="col-md-4 offset-md-4">
             <a href="order" class="btn btn-success btn-lg">Place order</a>
         </div>
+        @endif
     </div>
 </div>
 
