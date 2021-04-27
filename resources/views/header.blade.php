@@ -41,7 +41,7 @@ if(Session::has('user'))
                     {{Session::get('user')['name']}}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Logout</a>
+                    <a class="dropdown-item" href="/logout">Logout</a>
                 </div>
             </li>
             @else
