@@ -20,8 +20,9 @@ class ProductController extends Controller
     {
         //
         {
-            $products = Product::orderByRaw('RAND()')
-                ->take(5)
+            $products = Product::select('*')
+                ->orderBy('id')
+                ->limit(5)
                 ->get();
             $newitems = DB::table('products')
                 ->orderBy('id', 'desc')
@@ -35,7 +36,7 @@ class ProductController extends Controller
     {
         //
         {
-            $products = Product::all();
+            $products = Product::paginate(10);
             return view('catalogue', ['products'=>$products]);
         }    
     }
