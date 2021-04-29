@@ -31,6 +31,7 @@ Route::post('/login', [UserController::class, 'login']);
 Route::get('/', [ProductController::class, 'index']);
 Route::get('/detail/{id}', [ProductController::class, 'show']);
 
+Route::get('catalogue', [ProductController::class, 'catalogue']);
 Route::get('search', [ProductController::class, 'search']);
 Route::post('add_to_cart', [ProductController::class, 'addToCart']);
 Route::get('cartlist', [ProductController::class, 'cartlist']);

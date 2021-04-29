@@ -20,8 +20,23 @@ class ProductController extends Controller
     {
         //
         {
+            $products = Product::orderByRaw('RAND()')
+                ->take(5)
+                ->get();
+            $newitems = DB::table('products')
+                ->orderBy('id', 'desc')
+                ->take(5)
+                ->get();
+            return view('product', ['products'=>$products, 'newitems'=>$newitems]);
+        }    
+    }
+
+    public function catalogue()
+    {
+        //
+        {
             $products = Product::all();
-            return view('product', ['products'=>$products]);
+            return view('catalogue', ['products'=>$products]);
         }    
     }
 

@@ -29,13 +29,14 @@
         </div>
     </div>
     <div class="product-wrapper mx-2 ">
-        <h3>Trending Products</h3>
+        <h3>Newly Added</h3>
         <div class="trending-section mb-4">
-            @foreach($products as $product)
+            @foreach($newitems as $newitem)
             <div class="trending-item">
-                <a href="detail/{{$product['id']}}">
-                    <img class="img-trending" src="{{$product['image']}}" class="d-block w-100" alt="...">
-                    <h6>{{$product['name']}}</h6>
+                <a href="detail/{{$newitem->id}}">
+                    <img class="img-trending" src="{{$newitem->image}}" class="d-block w-100" alt="...">
+                    <h6>{{$newitem->name}}</h6>
+                    <p>{{$newitem->writer}}</p>
                 </a>
             </div>
             @endforeach
