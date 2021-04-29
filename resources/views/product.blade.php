@@ -7,7 +7,7 @@
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 @foreach($products as $product)
-                <div class="carousel-item slider {{$product['id']==4? 'active' : ''}}">
+                <div class="carousel-item slider {{$product['id']==1? 'active' : ''}}">
                     <a href="detail/{{$product['id']}}">
                         <img class="mx-auto d-block img-slider" src="{{$product['image']}}" alt="First slide">
                     </a>
