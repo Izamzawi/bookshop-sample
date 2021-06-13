@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-4 offset-sm-4">
-            <form action="store" method="POST">
+            <form action="addBook" method="POST">
                 @csrf
                 <div class="form-group">
                     <label for="title">Title</label>
