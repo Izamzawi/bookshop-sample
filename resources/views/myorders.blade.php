@@ -21,7 +21,7 @@
                     </div>
                     <div class="col-4 pt-4">
                         <h5><a href="detail/{{$product->id}}">{{$product->name}}</a></h5>
-                        <h6>{{$product->writer}}</h6>                    
+                        <h6>{{$product->author}}</h6>                    
                         <h6>{{$product->description}}</h6>                    
                     </div>
                     <div class="col-4">

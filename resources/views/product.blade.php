@@ -36,7 +36,7 @@
                 <a href="detail/{{$newitem->id}}">
                     <img class="img-trending" src="{{$newitem->image}}" class="d-block w-100" alt="...">
                     <h6>{{$newitem->name}}</h6>
-                    <p>{{$newitem->writer}}</p>
+                    <p>{{$newitem->author}}</p>
                 </a>
             </div>
             @endforeach

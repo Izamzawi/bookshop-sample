@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
+use Session;
 use App\Models\Product;
 use App\Models\Cart;
 use App\Models\Order;
-use Session;
-use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -48,7 +49,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('addBook');
     }
 
     /**
@@ -59,7 +60,25 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required',
+            'price' => 'required|regex:/^[0-9]+$/', 
+            'category' => 'required',
+            'author' => 'required',
+            'description' => 'required',
+            'image' => 'required',
+        ]);
+
+        Product::create([
+            'title' => Str::title($request->input('title')),
+            'price' => $request->input('price'), 
+            'category' => $request->input('category'),
+            'author' => Str::title($request->input('author')),
+            'description' => Str::ucfirst($request->input('description')),
+            'image' => $request->input('title'),
+        ]);
+
+        return redirect('/catalogue');
     }
 
     /**

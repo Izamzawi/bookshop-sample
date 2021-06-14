@@ -10,7 +10,7 @@
         <div class="col-sm-6">
             <a href="/">Go back</a>
             <h2>{{$product['name']}}</h2>
-            <h5>Writer : {{$product['writer']}}</h5>
+            <h5>Author : {{$product['author']}}</h5>
             <h5>Price : {{$product['price']}}</h5>
             <h5>Category : {{$product['category']}}</h5>
             <p>{{$product['description']}}</p>
